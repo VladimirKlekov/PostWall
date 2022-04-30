@@ -4,8 +4,6 @@ import ru.netology.servis.*
 import ru.netology.servis.DateTime.currentDataTime
 
 
-//
-
 const val ID_OWNER_WALL = 100 //Идентификатор владельца стены, на которой размещена запись
 const val ID_AUTHOR_POST = 200 //Идентификатор автора записи (от чьего имени опубликована запись)
 const val ID_ADMIN_POST = 300 //Идентификатор администратора, который опубликовал запись
@@ -14,7 +12,7 @@ const val REPLY_POST_ID = 500 //Идентификатор записи, в от
 const val SINGER_ID =
     600 //Идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем;
 const val IS_PINED = 1 // TODO потом адаптировать//Информация о том, что запись закреплена.
-const val FRIENDS_ONLY = 1
+
 
 //Data класс Post.
 data class Post(
@@ -33,7 +31,7 @@ data class Post(
     val reposts: Reposts = Reposts,
     var views: Views = Views,
     var postType: String = postTypePost(),
-//    post_source : Object, //Поле возвращается только для Standalone-приложений с ключом доступа, полученным в Implicit Flow.
+    var post_source: PostSource = PostSource,
 //    attachments attachments: Array, //Медиавложения записи (фотографии, ссылки и т.п.). Описание массива attachments
 //    geo////geo: Object, //Информация о местоположении , содержит поля:
     val signerId: Int = SINGER_ID,
