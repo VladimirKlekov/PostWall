@@ -15,14 +15,14 @@ class WallServiceTest {
         wallServiceTest.add(
             Post(
                 0, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
-                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия",
+                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
                 8, true, true, true, 9, true, true, Donut, 10
             )
         )
 
         val update = Post(
             1, 12, 13, 14, DateTime.currentDataTime, "Проверка сервиса",
-            15, 16, 17, Comments, Copyright, Likes, Reposts, Views, "Копия",
+            15, 16, 17, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
             18, true, true, true, 19, true, true, Donut, 12
         )
 
@@ -42,28 +42,28 @@ class WallServiceTest {
         serviceUpdate.add(
             Post(
                 0, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
-                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия",
+                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
                 8, true, true, true, 9, true, true, Donut, 10
             )
         )
         serviceUpdate.add(
             Post(
                 1, 3, 4, 4, DateTime.currentDataTime, "Проверка сервиса",
-                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия",
+                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
                 8, true, true, true, 9, true, true, Donut, 10
             )
         )
         serviceUpdate.add(
             Post(
                 2, 4, 5,4, DateTime.currentDataTime, "Проверка сервиса",
-                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия",
+                5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
                 8, true, true, true, 9, true, true, Donut, 10
             )
         )
 
         val update = Post(
             1, 12, 13, 14, DateTime.currentDataTime, "Проверка сервиса",
-            15, 16, 17, Comments, Copyright, Likes, Reposts, Views, "Копия",
+            15, 16, 17, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
             18, true, true, true, 19, true, true, Donut, 12
         )
 
