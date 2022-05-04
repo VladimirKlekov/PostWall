@@ -4,6 +4,8 @@ import org.junit.Test
 
 import org.junit.Assert.*
 import ru.netology.post.Post
+import ru.netology.servis.geo.Geo
+import ru.netology.servis.repostHistory.CopyHistory
 
 class WallServiceTest {
 
@@ -16,15 +18,14 @@ class WallServiceTest {
             Post(
                 0, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
                 5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
-                8, true, true, true, 9, true, true, Donut, 10
+                emptyArray<Attachment>(), Geo, 9, CopyHistory, true, true, true, 9, true, true, Donut, 10
             )
         )
 
         val update = Post(
-            1, 12, 13, 14, DateTime.currentDataTime, "Проверка сервиса",
-            15, 16, 17, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
-            18, true, true, true, 19, true, true, Donut, 12
-        )
+            2, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
+            5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
+            emptyArray<Attachment>(), Geo, 9, CopyHistory, true, true, true, 9, true, true, Donut, 10 )
 
         //assert//выполняем целевое действие
 
@@ -40,31 +41,30 @@ class WallServiceTest {
         // создаём целевой сервис
         val serviceUpdate = WallService
         serviceUpdate.add(
-            Post(
-                0, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
+            Post(0, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
                 5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
-                8, true, true, true, 9, true, true, Donut, 10
+                emptyArray<Attachment>(), Geo, 9, CopyHistory, true, true, true, 9, true, true, Donut, 10
             )
         )
         serviceUpdate.add(
             Post(
-                1, 3, 4, 4, DateTime.currentDataTime, "Проверка сервиса",
+                1, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
                 5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
-                8, true, true, true, 9, true, true, Donut, 10
+                emptyArray<Attachment>(), Geo, 9, CopyHistory, true, true, true, 9, true, true, Donut, 10
             )
         )
         serviceUpdate.add(
             Post(
-                2, 4, 5,4, DateTime.currentDataTime, "Проверка сервиса",
+                2, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
                 5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
-                8, true, true, true, 9, true, true, Donut, 10
+                emptyArray<Attachment>(), Geo, 9, CopyHistory, true, true, true, 9, true, true, Donut, 10
             )
         )
 
         val update = Post(
-            1, 12, 13, 14, DateTime.currentDataTime, "Проверка сервиса",
-            15, 16, 17, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
-            18, true, true, true, 19, true, true, Donut, 12
+            1, 2, 3, 4, DateTime.currentDataTime, "Проверка сервиса",
+            5, 6, 7, Comments, Copyright, Likes, Reposts, Views, "Копия", PostSource,
+            emptyArray<Attachment>(), Geo, 9, CopyHistory, true, true, true, 9, true, true, Donut, 10
         )
 
         // выполняем целевое действие

@@ -2,6 +2,8 @@ package ru.netology.post
 
 import ru.netology.servis.*
 import ru.netology.servis.DateTime.currentDataTime
+import ru.netology.servis.geo.Geo
+import ru.netology.servis.repostHistory.CopyHistory
 
 
 const val ID_OWNER_WALL = 100 //Идентификатор владельца стены, на которой размещена запись
@@ -32,10 +34,10 @@ data class Post(
     var views: Views = Views,
     var postType: String = postTypePost(),
     var post_source: PostSource = PostSource,
-//    attachments attachments: Array, //Медиавложения записи (фотографии, ссылки и т.п.). Описание массива attachments
-//    geo////geo: Object, //Информация о местоположении , содержит поля:
+    var attachments: Array<Attachment> = emptyArray<Attachment>(), //Медиавложения записи (фотографии, ссылки и т.п.). Описание массива attachments
+    var geo: Geo = Geo, //Информация о местоположении , содержит поля:
     val signerId: Int = SINGER_ID,
-//   copyHistory ////copyHistory: Array, // Массив, содержащий историю репостов для записи.
+    var copyHistory: CopyHistory = CopyHistory, ////copyHistory: Array, // Массив, содержащий историю репостов для записи.
     val canPin: Boolean = canPinPost(),
     var canDelete: Boolean = canDeletePost(),
     var canEdit: Boolean = canEditPost(),
