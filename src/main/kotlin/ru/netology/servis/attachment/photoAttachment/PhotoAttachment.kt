@@ -1,7 +1,7 @@
 package ru.netology.servis.attachment.photoAttachment
 
 import ru.netology.servis.Attachment
-import ru.netology.servis.attachment.photoAttachment.SizesCopyImage
+
 
 //Объект, описывающий фотографию, содержит следующие поля:
 class PhotoAttachment(photo: String): Attachment(photo) {

@@ -14,7 +14,9 @@ import ru.netology.servis.attachment.pageAttachment.PageAttachment
 import ru.netology.servis.attachment.photoAttachment.PhotoAttachment
 import ru.netology.servis.attachment.photosListAttachment.PhotosListAttachment
 import ru.netology.servis.attachment.pollAttachment.PollAttachment
+import ru.netology.servis.attachment.postedPhotoAttachment.PostedPhotoAttachment
 import ru.netology.servis.attachment.videoAttachment.VideoAttachment
+
 
 
 abstract class Attachment(val types: String) {
@@ -23,7 +25,7 @@ abstract class Attachment(val types: String) {
     private val typeAttachment= when(types)
 
     {   "photo" -> valueAttachment = PhotoAttachment(types);
-        "posted_photo" -> valueAttachment = PhotoAttachment(types);//
+        "postedPhoto" -> valueAttachment = PostedPhotoAttachment(types);//
         "video" -> valueAttachment = VideoAttachment(types)
         "audio" -> valueAttachment = AudioAttachment(types)
         "doc" -> valueAttachment = DocAttachment(types);
@@ -43,6 +45,15 @@ abstract class Attachment(val types: String) {
 
         else -> {}
     }
+//
+//    class PhotoAttachment(photo: String): Attachment(photo)
+//    class PostedPhotoAttachment(postedPhoto: String): Attachment(postedPhoto)
+
+
+
+
+
+
 
     }
 

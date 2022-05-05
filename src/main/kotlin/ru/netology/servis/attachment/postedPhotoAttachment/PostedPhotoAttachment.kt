@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.postedPhotoAttachment
 
-class PostedPhotoAttachment {
+import ru.netology.servis.Attachment
+
+open class PostedPhotoAttachment(postedPhoto: String): Attachment(postedPhoto) {
     private val id: Int = 1
     private val owner_id: Int = 1
     private val photo130: String = "URL изображения для предпросмотра"
