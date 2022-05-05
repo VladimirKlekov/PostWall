@@ -1,8 +1,9 @@
 package ru.netology.servis.attachment.stickerAttachment
 
+import ru.netology.servis.Attachment
 import ru.netology.servis.attachment.photoAttachment.SizesCopyImage
 
-class StickerAttachment {
+class StickerAttachment(sticker: String): Attachment(sticker) {
 
     private val id: Int = 1 //Идентификатор набора
     private val stickerId: Int = 1 // Идентификатор стикера.

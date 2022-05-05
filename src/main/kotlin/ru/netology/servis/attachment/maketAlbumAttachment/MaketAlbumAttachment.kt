@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.maketAlbumAttachment
 
-class MaketAlbumAttachment {
+import ru.netology.servis.Attachment
+
+class MaketAlbumAttachment(marketAlbum: String): Attachment(marketAlbum) {
 
     private val id: Int = 1 //Идентификатор подборки
     private val ownerId: Int = 1 // Идентификатор владельца подборки

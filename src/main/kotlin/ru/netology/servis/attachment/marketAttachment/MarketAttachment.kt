@@ -1,8 +1,9 @@
 package ru.netology.servis.attachment.marketAttachment
 
+import ru.netology.servis.Attachment
 import ru.netology.servis.attachment.marketAttachment.dimensionsMarketAttachment.DimensionsMarketAttachment
 
-object MarketAttachment {
+class MarketAttachment(market: String): Attachment(market) {
     private val id: Int = 1 //Идентификатор товара
     private val ownerId: Int = 1 //Идентификатор владельца товара.
     private val title: String = "Название товара."

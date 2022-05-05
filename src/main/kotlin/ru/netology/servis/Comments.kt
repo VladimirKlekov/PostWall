@@ -2,11 +2,11 @@ package ru.netology.servis
 
 
 object Comments {
-    var count:Int  = 1
-    val canPost:Int = 1
-    val groupsCanPost:Int = 1
-    val canClose:Boolean = true
-    val canOpen:Boolean = true
+    private var count:Int  = 1
+    private val canPost:Int = 1
+    private val groupsCanPost:Int = 1
+    private val canClose:Boolean = true
+    private val canOpen:Boolean = true
 }
 
 //Информация о комментариях к записи, объект с полями:

@@ -1,11 +1,12 @@
 package ru.netology.servis.attachment.videoAttachment
 
+import ru.netology.servis.Attachment
 import ru.netology.servis.attachment.videoAttachment.FirstFrame
 import ru.netology.servis.attachment.videoAttachment.Reposts
 import ru.netology.servis.attachment.videoAttachment.VideoLikes
 import ru.netology.servis.attachment.videoAttachment.СoverImage
 
-class VideoAttachment {
+class VideoAttachment(video: String): Attachment(video) {
     private val id: Int = 1 //Идентификатор видеозаписи.
     private val ownerId: Int = 1 //Идентификатор владельца видеозаписи.
     private val title: String = "Идентификатор владельца видеозаписи."

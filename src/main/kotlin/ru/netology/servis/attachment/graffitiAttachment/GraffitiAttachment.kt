@@ -1,7 +1,9 @@
 package ru.netology.servis.attachment.graffitiAttachment
 
+import ru.netology.servis.Attachment
 
-class GraffitiAttachment {
+
+class GraffitiAttachment(graffiti: String): Attachment(graffiti) {
 
 
     private val id: Int = 1 //идентификатор граффити

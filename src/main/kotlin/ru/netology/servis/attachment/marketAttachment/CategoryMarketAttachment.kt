@@ -3,9 +3,11 @@ package ru.netology.servis.attachment.marketAttachment
 import ru.netology.servis.attachment.marketAttachment.categoryMarketAttachment.sectionCategoryMarketAttachment
 
 object CategoryMarketAttachment {
+
     private val id: Int = 1 //идентификатор категории;
     private val name: String = "название категории."
-    private val section: sectionCategoryMarketAttachment = sectionCategoryMarketAttachment
+    //MarketAttachment()
+
 
 }
 //category object Категория товара. Объект, содержащий поля:

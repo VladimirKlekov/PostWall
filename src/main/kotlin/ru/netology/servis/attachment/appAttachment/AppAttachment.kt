@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.appAttachment
 
-class AppAttachment {
+import ru.netology.servis.Attachment
+
+class AppAttachment(app: String): Attachment(app) {
     private val idApp: Int = 1 //идентификатор приложения.
     private val ownerId: Int = 1 //идентификатор приложения.
     private val photo130: String = "URL изображения для предпросмотра."

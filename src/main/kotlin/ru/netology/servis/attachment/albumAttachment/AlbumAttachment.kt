@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.albumAttachment
 
-class AlbumAttachment {
+import ru.netology.servis.Attachment
+
+class AlbumAttachment(album: String): Attachment(album) {
 
     private val id: Int = 1 //идентификатор альбома
     private val thumb: ThumbAlbumAttachment = ThumbAlbumAttachment //обложка альбома, объект photo.

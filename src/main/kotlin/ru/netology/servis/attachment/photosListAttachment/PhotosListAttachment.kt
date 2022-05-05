@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.photosListAttachment
 
-class PhotosListAttachment {
+import ru.netology.servis.Attachment
+
+class PhotosListAttachment(photosList: String): Attachment(photosList) {
 
 }
 

@@ -1,6 +1,6 @@
 package ru.netology.servis.geo
 
-class Geo {
+object Geo {
     private val type: String = "тип места."
     private val coordinates: String = "coordinates."
     private val place: GeoPlace = GeoPlace //описание места (если оно добавлено). Объект места.

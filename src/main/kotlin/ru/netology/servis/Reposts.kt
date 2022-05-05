@@ -1,8 +1,8 @@
 package ru.netology.servis
 
 object Reposts {
-    var count: Int = 11
-    val userReposted: Int = 1
+    private var count: Int = 11
+    private val userReposted: Int = 1
 }
 //Информация о репостах записи («Рассказать друзьям»), объект с полями:
 //count (integer) — число пользователей, скопировавших запись;

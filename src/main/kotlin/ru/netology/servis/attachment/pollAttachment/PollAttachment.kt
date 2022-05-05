@@ -1,7 +1,9 @@
 package ru.netology.servis.attachment.pollAttachment
 
+import ru.netology.servis.Attachment
 
-class PollAttachment {
+
+class PollAttachment(poll: String): Attachment(poll) {
 
     private val id: Int = 1 //Идентификатор опроса для получения информации.
     private val ownerId: Int = 1 //Идентификатор владельца опроса.

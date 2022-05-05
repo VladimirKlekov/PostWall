@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.noteAttachment
 
-class NoteAttachment {
+import ru.netology.servis.Attachment
+
+class NoteAttachment(note: String): Attachment(note) {
 
     private val idNote: Int = 1 //Идентификатор заметки.
     private val ownerIdNote: Int = 1 //Идентификатор владельца заметки.

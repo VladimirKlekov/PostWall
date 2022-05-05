@@ -1,7 +1,9 @@
 package ru.netology.servis.attachment.docAttachment
 
+import ru.netology.servis.Attachment
 
-class DocAttachment {
+
+class DocAttachment(doc: String): Attachment(doc) {
 
     private val idDoc: Int = 1 //Идентификатор файла.
     private val ownerId: Int = 1 //Идентификатор пользователя, загрузившего файл.

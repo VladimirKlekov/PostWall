@@ -6,45 +6,71 @@ import ru.netology.servis.attachment.audioAttachment.AudioAttachment
 import ru.netology.servis.attachment.docAttachment.DocAttachment
 import ru.netology.servis.attachment.eventAttachment.EventAttachment
 import ru.netology.servis.attachment.graffitiAttachment.GraffitiAttachment
+
 import ru.netology.servis.attachment.linkAttachment.LinkAttachment
-import ru.netology.servis.attachment.maketAlbumAttachment.MaketAlbumAttachment
 import ru.netology.servis.attachment.marketAttachment.MarketAttachment
 import ru.netology.servis.attachment.noteAttachment.NoteAttachment
 import ru.netology.servis.attachment.pageAttachment.PageAttachment
 import ru.netology.servis.attachment.photoAttachment.PhotoAttachment
 import ru.netology.servis.attachment.photosListAttachment.PhotosListAttachment
 import ru.netology.servis.attachment.pollAttachment.PollAttachment
-import ru.netology.servis.attachment.postedPhotoAttachment.PostedPhotoAttachment
-import ru.netology.servis.attachment.prettyCardsAttachement.PrettyCardsAttachement
-import ru.netology.servis.attachment.stickerAttachment.StickerAttachment
 import ru.netology.servis.attachment.videoAttachment.VideoAttachment
 
-abstract class Attachment(
 
-    private val photo: PhotoAttachment = PhotoAttachment,
-    private val postedPhoto: PostedPhotoAttachment = PostedPhotoAttachment,
-    private val video: VideoAttachment = VideoAttachment,
-    private val audio: AudioAttachment = AudioAttachment,
-    private val doc: DocAttachment = DocAttachment,
-    private val graffiti: GraffitiAttachment = GraffitiAttachment,
-    private val link: LinkAttachment = LinkAttachment,
-    private val note: NoteAttachment = NoteAttachment,
-    private val app: AppAttachment = AppAttachment,
-    private val poll: PollAttachment = PollAttachment,
-    private val page: PageAttachment = PageAttachment,
-    private val album: AlbumAttachment = AlbumAttachment,
-    private val photosList: PhotosListAttachment = PhotosListAttachment,
-    private val market: MarketAttachment = MarketAttachment,
-    private val marketAlbum: MaketAlbumAttachment = MaketAlbumAttachment,
-    private val sticker: StickerAttachment = StickerAttachment,
-    private val prettyCards: PrettyCardsAttachement = PrettyCardsAttachement,
-    private val event: EventAttachment = EventAttachment,
-) {
-    val AttachmentArray = ArrayOf(0, 0, 0)
+abstract class Attachment(val types: String) {
+    val valueAttachment: Any = TODO();
 
-    abstract fun ArrayOf(i: Int, i1: Int, i2: Int): Any
+    private val typeAttachment= when(types)
 
-}
+    {   "photo" -> valueAttachment = PhotoAttachment(types);
+        "posted_photo" -> valueAttachment = PhotoAttachment(types);//
+        "video" -> valueAttachment = VideoAttachment(types)
+        "audio" -> valueAttachment = AudioAttachment(types)
+        "doc" -> valueAttachment = DocAttachment(types);
+        "graffiti" -> valueAttachment = GraffitiAttachment(types);
+        "link" -> valueAttachment = LinkAttachment(types);
+        "note" -> valueAttachment = NoteAttachment(types);
+        "app" -> valueAttachment = AppAttachment(types);
+        "poll" -> valueAttachment = PollAttachment(types);
+        "page" -> valueAttachment = PageAttachment(types);
+        "album" -> valueAttachment = AlbumAttachment(types);
+        "photosList" -> valueAttachment = PhotosListAttachment(types);
+        "market" -> valueAttachment = MarketAttachment(types);
+        "marketAlbum" -> valueAttachment = PhotoAttachment(types);
+        "sticker" -> valueAttachment = PhotoAttachment(types);
+        "prettyCards" -> valueAttachment = PhotoAttachment(types);
+        "event" -> valueAttachment = EventAttachment(types);
+
+        else -> {}
+    }
+
+    }
+
+
+
+
+
+
+
+//            Задача:
+//    есть:
+//    1.объект типа Attachment,
+//    2.в котором есть поле type,
+//    3.а вот какое второе поле у него есть - мы не знаем (оно определяется на базе значения поля type).
+//    4.Сделать Attachment абстрактным классом.
+//    Выполнить:
+//   Информация о медиавложениях в записях и комментариях на стене возвращается в виде массива attachments.
+//    - Каждый элемент массива представляет собой объект с двумя полями. Первое поле — type
+////    (string) содержит тип вложения (photo,note,audio и т.д.)
+//    - Второе поле содержит объект, представляющий медиавложение. Структура объекта в
+////    этом поле зависит от его типа.
+
+//
+
+
+
+
+
 
 
 //    1. Фотография (type = photo)
@@ -76,3 +102,21 @@ abstract class Attachment(
 //    Каждый объект может содержать дополнительное поле access_key — ключ доступа к контенту. Описание
 //    поля access_key Вы можете найти на
 
+//private val photo: PhotoAttachment = PhotoAttachment,
+//private val postedPhoto: PostedPhotoAttachment = PostedPhotoAttachment,
+//private val video: VideoAttachment = VideoAttachment,
+//private val audio: AudioAttachment = AudioAttachment,
+//private val doc: DocAttachment = DocAttachment,
+//private val graffiti: GraffitiAttachment = GraffitiAttachment,
+//private val link: LinkAttachment = LinkAttachment,
+//private val note: NoteAttachment = NoteAttachment,
+//private val app: AppAttachment = AppAttachment,
+//private val poll: PollAttachment = PollAttachment,
+//private val page: PageAttachment = PageAttachment,
+//private val album: AlbumAttachment = AlbumAttachment,
+//private val photosList: PhotosListAttachment = PhotosListAttachment,
+//private val market: MarketAttachment = MarketAttachment,
+//private val marketAlbum: MaketAlbumAttachment = MaketAlbumAttachment,
+//private val sticker: StickerAttachment = StickerAttachment,
+//private val prettyCards: PrettyCardsAttachement = PrettyCardsAttachement,
+//private val event: EventAttachment = EventAttachment,

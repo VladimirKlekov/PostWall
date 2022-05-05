@@ -6,10 +6,10 @@ import kotlin.random.nextInt
 
 object PostSource {
 
-    val typePostSource: String = typePostSource()
-    val platformPostSource: String = platformPostSource()
-    val dataPostSource: String = dataPostSource(typePostSource)
-    val url: String = "https://dev.vk.com/reference/objects/post-source"
+    private val typePostSource: String = typePostSource()
+    private val platformPostSource: String = platformPostSource()
+    private val dataPostSource: String = dataPostSource(typePostSource)
+    private val url: String = "https://dev.vk.com/reference/objects/post-source"
 
 
     fun typePostSource(): String {

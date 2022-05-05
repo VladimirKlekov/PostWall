@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.audioAttachment
 
-class AudioAttachment {
+import ru.netology.servis.Attachment
+
+class AudioAttachment(audio: String): Attachment(audio) {
 
     private val idAudio: Int = 1 //Идентификатор аудиозаписи.
     private val ownerId: Int = 1 //Идентификатор владельца аудиозаписи.

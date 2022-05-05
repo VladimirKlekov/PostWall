@@ -2,10 +2,10 @@ package ru.netology.servis
 
 object Likes {
 
-    var count: Int = 10
-    val userLikes: Int = 1
-    val canLike: Int = 1
-    val canPublish: Int = 1
+    private var count: Int = 10
+    private val userLikes: Int = 1
+    private val canLike: Int = 1
+    private val canPublish: Int = 1
 }
 //Информация о лайках к записи, объект с полями:
 //count (integer) — число пользователей, которым понравилась запись;

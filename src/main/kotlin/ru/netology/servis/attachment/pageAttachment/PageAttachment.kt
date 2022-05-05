@@ -1,6 +1,8 @@
 package ru.netology.servis.attachment.pageAttachment
 
-class PageAttachment {
+import ru.netology.servis.Attachment
+
+class PageAttachment(page: String): Attachment(page) {
 
     private val id: Int = 1 //Идентификатор вики-страницы
     private val groupId: Int = 1 //Идентификатор сообщества.

@@ -1,8 +1,9 @@
 package ru.netology.servis.attachment.prettyCardsAttachement
 
+import ru.netology.servis.Attachment
 import ru.netology.servis.attachment.stickerAttachment.ImageWithBackgroundStickerAttachment
 
-class PrettyCardsAttachement {
+class PrettyCardsAttachement(prettyCards: String): Attachment(prettyCards) {
 
     private val cardId: String = "идентификатор карточки."
     private val clinkUrl: String = "URL карточки."

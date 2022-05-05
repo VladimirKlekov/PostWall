@@ -3,12 +3,12 @@ import ru.netology.servis.plug.Placeholder
 
 object Donut {
 
-    val isDonut: Boolean = true
-    val paidDuration: Int = 10_000
-    val placeholder: Placeholder = Placeholder
-    val canPublishFreeCopy: Boolean = true
+    private val isDonut: Boolean = true
+    private val paidDuration: Int = 10_000
+    private val placeholder: Placeholder = Placeholder
+    private val canPublishFreeCopy: Boolean = true
     //val all //TODO что это?
-    val duration: Int = 20000
+    private val duration: Int = 20000
 
 }
 //Информация о записи VK Donut:
