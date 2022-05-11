@@ -3,7 +3,7 @@ package ru.netology.servis.attachment.eventAttachment
 import ru.netology.servis.Attachment
 
 
-class EventAttachment(event: String): Attachment(event) {
+class EventAttachment(): Attachment("event") {
 
     private val id: Int = 1 //идентификатор встречи
     private val time: Int = (System.currentTimeMillis() / 1000).toInt()//время начала встречи в Unixtime

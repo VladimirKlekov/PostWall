@@ -30,7 +30,7 @@ data class Post(
     val comments: Comments = Comments,
     val copyright: Copyright = Copyright,
     var likes: Likes = Likes,
-    val reposts: Reposts = Reposts,
+    val reposts: Reposts ?,
     var views: Views = Views,
     var postType: String = postTypePost(),
     var post_source: PostSource = PostSource,

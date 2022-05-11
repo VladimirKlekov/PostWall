@@ -2,7 +2,7 @@ package ru.netology.servis.attachment.linkAttachment
 
 import ru.netology.servis.Attachment
 
-class LinkAttachment(link: String): Attachment(link) {
+class LinkAttachment(): Attachment("link") {
 
 
     private val urlLink: String = "URL ссылки"

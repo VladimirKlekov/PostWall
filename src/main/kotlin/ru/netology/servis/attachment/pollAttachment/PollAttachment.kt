@@ -1,36 +1,36 @@
-package ru.netology.servis.attachment.pollAttachment
-
-import ru.netology.servis.Attachment
-
-
-class PollAttachment(poll: String): Attachment(poll) {
-
-    private val id: Int = 1 //Идентификатор опроса для получения информации.
-    private val ownerId: Int = 1 //Идентификатор владельца опроса.
-    private val created: Int = (System.currentTimeMillis() / 1000).toInt()//Дата создания в формате Unixtime.
-    private val question: String = "Текст вопроса."
-    private val votes: Int = 1 //Количество голосов
-    private var answers = emptyArray<AnswerPollAttachment>()
-    private val anonymous: Boolean = true//Является ли опрос анонимным
-    private val multiple: Boolean = true//Допускает ли опрос выбор нескольких вариантов ответа.
-    private var answerIds =
-        emptyArray<AnswerIdPollAttachment>() //Идентификаторы вариантов ответа, выбранных текущим пользователем.
-    private val endDate: Int =
-        (System.currentTimeMillis() / 1000).toInt()//Дата завершения опроса в Unixtime. 0, если опрос бессрочный.
-    private val closed: Boolean = true//Является ли опрос завершенным
-    private val isBoard: Boolean = true//Прикреплён ли опрос к обсуждению
-    private val canEdit: Boolean = true//Можно ли отредактировать опрос.
-    private val canVote: Boolean = true//Можно ли проголосовать в опросе.
-    private val canReport: Boolean = true//Можно ли пожаловаться на опрос
-    private val canShare: Boolean = true//Можно ли поделиться опросом.
-    private val authorId: Int = 1 //Идентификатор автора опроса
-    private val photo: PhotoPollAttachment = PhotoPollAttachment //Идентификатор автора опроса
-    private val background: BackgroundPollAttachment =
-        BackgroundPollAttachment //Фон сниппета опроса. Объект, который содержит поля:
-    private var friends = emptyArray<FriendsPollAttachment>() //Идентификаторы 3 друзей, которые проголосовали в опросе.
-
-
-}
+//package ru.netology.servis.attachment.pollAttachment
+//
+//import ru.netology.servis.Attachment
+//
+//
+//class PollAttachment(): Attachment("poll") {
+//
+//    private val id: Int = 1 //Идентификатор опроса для получения информации.
+//    private val ownerId: Int = 1 //Идентификатор владельца опроса.
+//    private val created: Int = (System.currentTimeMillis() / 1000).toInt()//Дата создания в формате Unixtime.
+//    private val question: String = "Текст вопроса."
+//    private val votes: Int = 1 //Количество голосов
+//    private var answers = emptyArray<AnswerPollAttachment>()
+//    private val anonymous: Boolean = true//Является ли опрос анонимным
+//    private val multiple: Boolean = true//Допускает ли опрос выбор нескольких вариантов ответа.
+//    private var answerIds =
+//        emptyArray<AnswerIdPollAttachment>() //Идентификаторы вариантов ответа, выбранных текущим пользователем.
+//    private val endDate: Int =
+//        (System.currentTimeMillis() / 1000).toInt()//Дата завершения опроса в Unixtime. 0, если опрос бессрочный.
+//    private val closed: Boolean = true//Является ли опрос завершенным
+//    private val isBoard: Boolean = true//Прикреплён ли опрос к обсуждению
+//    private val canEdit: Boolean = true//Можно ли отредактировать опрос.
+//    private val canVote: Boolean = true//Можно ли проголосовать в опросе.
+//    private val canReport: Boolean = true//Можно ли пожаловаться на опрос
+//    private val canShare: Boolean = true//Можно ли поделиться опросом.
+//    private val authorId: Int = 1 //Идентификатор автора опроса
+//    private val photo: PhotoPollAttachment = PhotoPollAttachment //Идентификатор автора опроса
+//    private val background: BackgroundPollAttachment =
+//        BackgroundPollAttachment //Фон сниппета опроса. Объект, который содержит поля:
+//    private var friends = emptyArray<FriendsPollAttachment>() //Идентификаторы 3 друзей, которые проголосовали в опросе.
+////
+//
+//}
 //id integer Идентификатор опроса для получения информации о нем через метод polls.getById.
 //owner_id integer Идентификатор владельца опроса.
 //created integer Дата создания в формате Unixtime.

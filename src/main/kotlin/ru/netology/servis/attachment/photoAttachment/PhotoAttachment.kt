@@ -4,7 +4,7 @@ import ru.netology.servis.Attachment
 
 
 //Объект, описывающий фотографию, содержит следующие поля:
-class PhotoAttachment(photo: String): Attachment(photo) {
+class PhotoAttachment(): Attachment("photo") {
 
 
         private val id: Int = 1 //Идентификатор фотографии
