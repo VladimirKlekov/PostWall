@@ -1,20 +1,17 @@
 package ru.netology
 
-import ru.netology.post.Post
-import ru.netology.servis.WallService
-import ru.netology.servis.WallService.printArray
+import ru.netology.servis.Attachment
+import ru.netology.servis.PhotoAttachment
+import ru.netology.servis.VideoAttachment
+
 
 fun main() {
 
 
-    val Post1 = Post()
-    WallService.add(Post1)
-    printArray()
-
-    val Post2 = Post()
-    WallService.add(Post2)
-    printArray()
-
+val test = PhotoAttachment("photo")
+    println(test)
+    val attachment: Attachment = VideoAttachment("video")
+     println(attachment.type)
 
 }
 
