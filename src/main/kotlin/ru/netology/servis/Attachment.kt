@@ -25,52 +25,73 @@ import ru.netology.servis.attachment.videoAttachment.СoverImage
 sealed class Attachment(val type: String) {
 
 
-    private val valueAttachment: Array<Attachment> = arrayOf()
+
+   var valueAttachment = emptyArray<Attachment>()
 
     fun smartCast(attachment: Attachment): Attachment {
-        if (attachment is PhotoAttachment) { //если attachment является PhotoAttachment
-            valueAttachment[0] as PhotoAttachment //сохрани в первую ячейку как тип класс PhotoAttachment
+        if (attachment is PhotoAttachment) {
+            valueAttachment += PhotoAttachment()
+            return valueAttachment.last()
         } else if (attachment is PostedPhotoAttachment) {
-            valueAttachment[1] as PostedPhotoAttachment//сохрани во вторую ячейку как тип класс PostedPhotoAttachment
+            valueAttachment += PostedPhotoAttachment()
+            return valueAttachment.last()
         } else if (attachment is VideoAttachment) {
-            valueAttachment[2] as VideoAttachment
+            valueAttachment += VideoAttachment()
+            return valueAttachment.last()
         } else if (attachment is AudioAttachment) {
-            valueAttachment[3] as AudioAttachment
+            valueAttachment += AudioAttachment()
+            return valueAttachment.last()
         } else if (attachment is DocAttachment) {
-            valueAttachment[4] as DocAttachment
+            valueAttachment += DocAttachment()
+            return valueAttachment.last()
         } else if (attachment is GraffitiAttachment) {
-            valueAttachment[5] as GraffitiAttachment
+            valueAttachment += GraffitiAttachment()
+            return valueAttachment.last()
         } else if (attachment is LinkAttachment) {
-            valueAttachment[6] as LinkAttachment
+            valueAttachment += LinkAttachment()
+            return valueAttachment.last()
         } else if (attachment is NoteAttachment) {
-            valueAttachment[7] as NoteAttachment
+            valueAttachment += NoteAttachment()
+            return valueAttachment.last()
         } else if (attachment is AppAttachment) {
-            valueAttachment[8] as AppAttachment
+            valueAttachment += AppAttachment()
+            return valueAttachment.last()
         } else if (attachment is PollAttachment) {
-            valueAttachment[9] as PollAttachment
+            valueAttachment += PollAttachment()
+            return valueAttachment.last()
         } else if (attachment is PageAttachment) {
-            valueAttachment[10] as PageAttachment
+            valueAttachment += PageAttachment()
+            return valueAttachment.last()
         } else if (attachment is AlbumAttachment) {
-            valueAttachment[11] as AlbumAttachment
+            valueAttachment += AlbumAttachment()
+            return valueAttachment.last()
         } else if (attachment is PhotosListAttachment) {
-            valueAttachment[12] as PhotosListAttachment
+            valueAttachment += PhotosListAttachment()
+            return valueAttachment.last()
         } else if (attachment is MarketAttachment) {
-            valueAttachment[13] as MarketAttachment
+            valueAttachment += MarketAttachment()
+            return valueAttachment.last()
         } else if (attachment is MaketAlbumAttachment) {
-            valueAttachment[14] as MaketAlbumAttachment
+            valueAttachment += MaketAlbumAttachment()
+            return valueAttachment.last()
         } else if (attachment is StickerAttachment) {
-            valueAttachment[15] as StickerAttachment
+            valueAttachment += StickerAttachment()
+            return valueAttachment.last()
         } else if (attachment is PrettyCardsAttachement) {
-            valueAttachment[16] as PrettyCardsAttachement
+            valueAttachment += PrettyCardsAttachement()
+            return valueAttachment.last()
         } else if (attachment is EventAttachment) {
-            valueAttachment[17] as EventAttachment
+            valueAttachment += EventAttachment()
+            return valueAttachment.last()
         }
         return attachment
     }
 }
 
 
-class PhotoAttachment(s: String) : Attachment("photo") {
+
+
+class PhotoAttachment() : Attachment("photo") {
     private val id: Int = 1 //Идентификатор фотографии
     private val albumId: Int = 1 //Идентификатор альбома, в котором находится фотография.
     private val ownerId: Int = 1 //Идентификатор владельца фотографии.
@@ -88,7 +109,7 @@ class PostedPhotoAttachment() : Attachment("postedPhoto") {
     private val photo604: String = "URL полноразмерного изображения"
 }
 
-class VideoAttachment(s: String) : Attachment("video") {
+class VideoAttachment() : Attachment("video") {
     private val id: Int = 1 //Идентификатор видеозаписи.
     private val ownerId: Int = 1 //Идентификатор владельца видеозаписи.
     private val title: String = "Идентификатор владельца видеозаписи."

@@ -6,6 +6,7 @@ import ru.netology.servis.geo.Geo
 import ru.netology.servis.repostHistory.CopyHistory
 
 
+
 const val ID_OWNER_WALL = 100 //Идентификатор владельца стены, на которой размещена запись
 const val ID_AUTHOR_POST = 200 //Идентификатор автора записи (от чьего имени опубликована запись)
 const val ID_ADMIN_POST = 300 //Идентификатор администратора, который опубликовал запись
@@ -34,7 +35,7 @@ data class Post(
     var views: Views = Views,
     var postType: String = postTypePost(),
     var post_source: PostSource = PostSource,
-    var attachments: Array<Attachment> = emptyArray<Attachment>(), //Медиавложения записи (фотографии, ссылки и т.п.). Описание массива attachments
+    var valueAttachment: Array<Attachment>?, //Медиавложения записи (фотографии, ссылки и т.п.). Описание массива attachments
     var geo: Geo = Geo, //Информация о местоположении , содержит поля:
     val signerId: Int = SINGER_ID,
     var copyHistory: CopyHistory = CopyHistory, ////copyHistory: Array, // Массив, содержащий историю репостов для записи.
