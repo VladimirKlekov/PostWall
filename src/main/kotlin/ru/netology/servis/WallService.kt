@@ -1,6 +1,7 @@
 package ru.netology.servis
 
 import ru.netology.post.Post
+import ru.netology.servis.exception.PostNotFoundException
 
 
 //Объект WallService, который внутри себя хранит посты в массиве. property
@@ -8,8 +9,37 @@ object WallService {
 
     private var posts = emptyArray<Post>()
     private var property: Int = 0
+    private var comments = emptyArray<Comment>()
+    private var reportComments = emptyArray<Comment>()
 
 
+    //-----------------------------------------------------------------------------------------------------
+
+    fun createComment(comment: Comment): Comment {
+        // проверяет, существует ли в массиве posts пост с id равным тому, что в комментарии в свойстве postId
+        for (post in posts) {
+            if (comment.post_id == post.idPost) {
+                //Если существует, то добавляет комментарий в массив comments
+                comments += comment
+            }
+            //если не существует - выкидывает исключение PostNotFoundException
+            else throw PostNotFoundException("нет поста с таким ID ")
+        }
+        return comments.last()
+    }
+    //-----------------------------------------------------------------------------------------------------
+
+    fun reportComment(comment: Comment) {
+
+        //Если жалоба поступила в классе Comment, то запускаю метод из class reportComment
+
+
+//        }else throw NotImplementedError("Комментарий заблокирован. Поступила жалоба")
+
+
+    }
+
+    //-----------------------------------------------------------------------------------------------------
     fun add(post: Post): Post {
         posts += if (posts.isEmpty()) {
             post.copy(idPost = 0)
@@ -20,6 +50,7 @@ object WallService {
         return posts.last()
     }
 
+    //-----------------------------------------------------------------------------------------------------
     fun update(post: Post): Boolean {
         for ((idPost, newPost) in posts.withIndex()) {
             if (newPost.idPost == post.idPost) {
@@ -29,17 +60,10 @@ object WallService {
         }
         return false
     }
-
-    fun printArray() {
-
-        var i = 0
-        for (printArray in posts) {
-
-            println(" Проверка массива $printArray")
-
-        }
-    }
 }
+
+
+
 
 
 //------
