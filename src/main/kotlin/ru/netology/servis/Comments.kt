@@ -1,7 +1,7 @@
 package ru.netology.servis
 
 
-object Comments {
+object Comments{
     private var count:Int  = 1
     private val canPost:Int = 1
     private val groupsCanPost:Int = 1

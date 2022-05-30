@@ -7,37 +7,42 @@ import ru.netology.servis.exception.PostNotFoundException
 //Объект WallService, который внутри себя хранит посты в массиве. property
 object WallService {
 
-    private var posts = emptyArray<Post>()
+    var posts = emptyArray<Post>()
     private var property: Int = 0
-    private var comments = emptyArray<Comment>()
-    private var reportComments = emptyArray<Comment>()
+    private var nextComId = 1
+    var comments = emptyArray<Comment>()
+    var reportComments = emptyArray<Report>()
 
 
     //-----------------------------------------------------------------------------------------------------
 
-    fun createComment(comment: Comment): Comment {
+    fun createComment(postId: Int, comment: Comment): Comment {
         // проверяет, существует ли в массиве posts пост с id равным тому, что в комментарии в свойстве postId
         for (post in posts) {
-            if (comment.post_id == post.idPost) {
+            if (postId == post.idPost) {
                 //Если существует, то добавляет комментарий в массив comments
+                comment.id = nextComId++
                 comments += comment
+                return comments.last()
             }
-            //если не существует - выкидывает исключение PostNotFoundException
-            else throw PostNotFoundException("нет поста с таким ID ")
         }
-        return comments.last()
+        //если не существует - выкидывает исключение PostNotFoundException
+        throw PostNotFoundException("нет поста с таким ID ")
     }
     //-----------------------------------------------------------------------------------------------------
 
-    fun reportComment(comment: Comment) {
-
-        //Если жалоба поступила в классе Comment, то запускаю метод из class reportComment
-
-
-//        }else throw NotImplementedError("Комментарий заблокирован. Поступила жалоба")
-
-
+    fun reportComment(idComment: Int, report: Report): Report {
+        for (comment in comments) {
+            if (comment.id == idComment) {
+                comment.complaint = 1
+                report.id = idComment
+                reportComments += report
+                return reportComments.last()
+            }
+        }
+        throw NotImplementedError("Жалоба не поступала")
     }
+
 
     //-----------------------------------------------------------------------------------------------------
     fun add(post: Post): Post {
@@ -61,9 +66,6 @@ object WallService {
         return false
     }
 }
-
-
-
 
 
 //------

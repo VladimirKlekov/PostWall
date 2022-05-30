@@ -48,6 +48,9 @@ data class Post(
     var donut: Donut = Donut,
     val postponedId: Int = 1 //TODO что это?
 )
+{
+
+}
 
 
 fun textPost(): String {
